@@ -1,5 +1,5 @@
 import React from "react";
-import {Checkbox} from "react-bootstrap";
+import {Checkbox, Button} from "react-bootstrap";
 
 export default class TodoListRoute extends React.Component {
 
@@ -34,7 +34,7 @@ export default class TodoListRoute extends React.Component {
     render() {
         return (
             <div>
-                <h1>Todos</h1>
+                <h1>Todos <small><Button href="#add">Add</Button></small></h1>
                 <div className="todos">
                     {this.state.todos.map((todo) => this.renderTodo(todo))}
                 </div>
@@ -44,8 +44,11 @@ export default class TodoListRoute extends React.Component {
 
     renderTodo(todo) {
         return <div className="todo" key={todo.id}>
-            <Checkbox inline onChange={this.todoChecked.bind(this, todo)} checked={todo.done}/>
-            {todo.value}
+            <input id={'todo-' + todo.id}
+                   type='checkbox'
+                   onChange={this.todoChecked.bind(this, todo)}
+                   checked={todo.done}/>
+            <label htmlFor={'todo-' + todo.id}>{todo.value}</label>
         </div>
     }
 

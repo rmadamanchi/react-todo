@@ -41,7 +41,7 @@ export default class TodoAddRoute extends React.Component {
                 <Form inline onSubmit={this.handleSubmit}>
                     <FormGroup controlId="formBasicText">
                         <FormControl type="text" value={this.state.todo} placeholder="Todo"
-                                     onChange={this.handleChange} style={{width: '400px'}}/>
+                                     onChange={this.handleChange} style={{width: '400px'}} autoComplete="off" />
                         <FormControl.Feedback />
                     </FormGroup>
                     <Button bsStyle="primary" type="submit"> Add </Button>
