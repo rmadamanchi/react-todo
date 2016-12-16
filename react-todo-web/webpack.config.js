@@ -37,7 +37,7 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                loader: "style!css!sass!import-glob"
+                loader: "style!css!sass"
             },
             {
                 test: /\.(png|jpg|jpeg|svg|gif|svg|woff|woff2|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,

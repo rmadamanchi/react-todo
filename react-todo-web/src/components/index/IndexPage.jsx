@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../common/Header.jsx";
 import {Jumbotron, Button} from "react-bootstrap";
+import "./IndexPage.scss";
 
 export default class HomePage extends React.Component {
 

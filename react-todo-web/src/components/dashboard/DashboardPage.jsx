@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../common/Header.jsx";
 import {Grid, Row, Col, Nav, NavItem} from "react-bootstrap";
 import classnames from "classnames";
+import "./DashboardPage.scss";
 
 export default class DashboardPage extends React.Component {
 
@@ -32,7 +33,7 @@ export default class DashboardPage extends React.Component {
     }
 
     renderLeftNav(route) {
-        return <Nav bsStyle="pills" stacked>
+        return <Nav bsStyle="pills" stacked className="todo-left-nav">
             <NavItem href="#list" className={classnames(route === '/list' && 'active')}>List</NavItem>
             <NavItem href="#add" className={classnames(route === '/add' && 'active')}>Add</NavItem>
         </Nav>
