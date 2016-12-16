@@ -32,7 +32,6 @@ export default class DashboardPage extends React.Component {
     }
 
     renderLeftNav(route) {
-        console.log(route);
         return <Nav bsStyle="pills" stacked>
             <NavItem href="#list" className={classnames(route === '/list' && 'active')}>List</NavItem>
             <NavItem href="#add" className={classnames(route === '/add' && 'active')}>Add</NavItem>
