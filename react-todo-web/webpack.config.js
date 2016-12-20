@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
 
 module.exports = {
     name: 'client',
@@ -9,19 +10,19 @@ module.exports = {
     entry: {
         index: 'components/index.jsx',
         dashboard: 'components/dashboard.jsx',
-        vendor: __dirname + '/src/vendor.jsx'
+        vendor: 'vendor.jsx'
     },
 
     devtool: 'source-map',
     output: {
-        path: __dirname + "/target/classes/static",
+        path: "/target/classes/static",
         filename: '[name].bundle.js'
     },
 
     resolve: {
         root: [
-            __dirname + "/src",
-            __dirname + "/src/components"
+            path.resolve("./src"),
+            path resolve("./src/components")
         ]
     },
 
